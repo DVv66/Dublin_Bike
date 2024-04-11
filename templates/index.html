@@ -1,0 +1,81 @@
+<!-- // referencing from the website https://www.youtube.com/watch?v=fc-D9eZmFFA
+// referencing from the website https://www.youtube.com/watch?v=bXV8uHEANBI&t=619s -->
+<!-- Referencing from the website https://api.cyclocity.fr/contracts/dublin/newsimages/045a30d2-1eca-4aa1-a815-a6bf94340a22 -->
+<!-- Referencing from the website https://www.chartjs.org/docs/latest/getting-started/ -->
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Bike Station Search</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="{{ url_for('static', filename='index.js') }}"></script>
+    
+    <!-- <script type="module" src="{{ url_for('static', filename='app.js') }}"></script> -->
+    
+
+</head>
+<body>
+    
+<div id="map"></div>
+
+<div id="search">
+    
+    <button class="btn1">Real-time</button>
+    <button class="btn2">Prediction</button>
+    
+    <div class="search_real_time show">
+    <h3>Real-time Bike Station Search</h3>
+    <h5><span id="day_Week"></span></h5>
+    <canvas id="bike-chart" height="100"></canvas>
+    <canvas id="bike-chart2" height="100"></canvas>
+    
+    <div id="average"></div>
+    <div id="weather-container"></div>
+    <p>Type your starting location and destination</p>
+    <div class="searchRealtime">
+        <!-- <h4>Starting location</h4> -->
+        <h4>Starting Location</h4>
+        <input type="search" id="search_start_real">
+        
+        <h4>Destination</h4>
+        <input type="search" id="search_des_real">
+    </div>
+    <p>Based on the route, click the appropriate yellow station you want to obtain bar chart information</p>
+</div>
+
+
+
+    <div class="search_prediction">
+        <h3>Prediction Bike Station Search</h3>
+        <h4>Starting Location</h4>
+        <input type="search" id="search_start">
+        
+        <h4>Destination</h4>
+        <input type="search" id="search_des_pre">
+        <p><br>Based on the route</p>
+        <iframe id="myframe" src="{{ url_for('factors') }}" width="95%" height="300px"></iframe>
+        <button class="btn3" onclick="reloadFrame()">Reset(Error or Choose again)</button>
+        <script>
+            function reloadFrame() {
+            var iframe = document.getElementById("myframe");
+            iframe.src = iframe.src;
+                }
+            </script>
+    
+    </div>
+
+</div>
+
+<!--
+The `defer` attribute causes the callback to execute after the full HTML
+document has been parsed.-->
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUKrfyRGhJ_UoLWPm9g7D6AFmloZQOXsw&language=en&libraries=places&callback=initMap&v=weekly"
+    defer
+></script>
+
+</body>
+</html>

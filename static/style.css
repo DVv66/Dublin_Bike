@@ -1,0 +1,108 @@
+/* <!-- // referencing from the website https://www.youtube.com/watch?v=fc-D9eZmFFA
+// referencing from the website https://www.youtube.com/watch?v=bXV8uHEANBI&t=619s -->
+<!-- Referencing from the website https://api.cyclocity.fr/contracts/dublin/newsimages/045a30d2-1eca-4aa1-a815-a6bf94340a22 -->
+<!-- Referencing from the website https://www.chartjs.org/docs/latest/getting-started/ --> */
+/* Set the size of the div
+element that contains the map
+*/
+#map {
+    height: 100%;
+    width: 60%;
+    float: left;
+    }
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    
+#content h1 {
+    color: purple;
+    }
+
+#station_availability ul {
+    color: #FFA07A;
+    }
+
+#search
+    {
+    height: 100%;
+    width: 40%;
+    float: right;
+    background-color: thistle;
+    }
+    
+    p {
+      margin: 0;
+
+    }
+    button {
+        margin-top: 10px;
+        margin-left: 45px;
+        margin-right: 10px;
+
+        height: 50px; 
+        width: 200px;
+        
+      }
+
+    h3 {
+        margin: 0px;
+        
+
+    }
+    h5 {
+      font-size: 12px;
+      opacity: 0.4;
+      margin: 0;
+    }
+
+    .search_real_time, .search_prediction {
+        display: none;
+      }
+    .search_prediction #myframe {
+      border: none;
+      
+      margin: 35px 5px;
+      max-height: 80vh;
+
+    }
+    .search_prediction .btn3 {
+        
+        margin-left: 200px;
+        margin-right: 10px;
+
+        height: 50px; 
+        width: 150px;
+
+    }
+    
+
+
+    .show {
+        display: block;
+      }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        
+      }
+    
+    .navbar a {
+        color: black;
+        padding: 0 10px;
+        text-decoration: none;
+      }
+    
+    body h1{
+        text-align: center;
+        padding: 80px 0;
+    }
+    body p{
+        text-align: center;
+    }
+    
+    
+    
+
+    
